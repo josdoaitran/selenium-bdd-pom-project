@@ -1,6 +1,7 @@
 package library;
 
 import base.Initialize;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.safari.SafariDriver;
 
 import java.net.MalformedURLException;
@@ -47,8 +48,6 @@ public class Generic extends Initialize {
             } else if (Generic.sBrowser.equalsIgnoreCase("safari")) {
                 DesiredCapabilities capabilitiesSafari;
                 capabilitiesSafari = DesiredCapabilities.safari();
-                //capabilitiesSafari.setPlatform(setOSForBrowser(Generic.sOS));//
-                //capabilitiesSafari.setVersion(Generic.sVersion);
                 driver = new RemoteWebDriver(new URL(SELENIUM_GRID_HUB), capabilitiesSafari);
             }
         }
