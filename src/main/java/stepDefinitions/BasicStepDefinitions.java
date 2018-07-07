@@ -1,4 +1,7 @@
 package stepDefinitions;
 
-public class BasicStepDefinitions {
+import base.Initialize;
+
+public class BasicStepDefinitions extends Initialize{
+
 }
