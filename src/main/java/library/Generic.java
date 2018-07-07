@@ -12,6 +12,7 @@ import org.openqa.selenium.safari.SafariDriver;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 import static library.LoggerLib.printLogFrameworkSteps;
 
