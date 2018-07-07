@@ -21,8 +21,6 @@
         <log4j.version>1.2.17</log4j.version>
         <!-- Appium library -->
         <ioAppium.version>5.0.4</ioAppium.version>
-        <!-- Rest Assert API -->
-        <rest.assured.version>2.3.4</rest.assured.version>
         <!-- Apache POI-->
         <poi.version>3.14</poi.version>
         <!-- Common Log -->
@@ -126,7 +124,6 @@
             <artifactId>commons-logging</artifactId>
             <version>${commons.logging.version}</version>
         </dependency>
-
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
@@ -141,11 +138,6 @@
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
             <version>${poi.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.jayway.restassured</groupId>
-            <artifactId>rest-assured</artifactId>
-            <version>${rest.assured.version}</version>
         </dependency>
         <dependency>
             <groupId>org.codehaus.groovy</groupId>

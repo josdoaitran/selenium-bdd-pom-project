@@ -1,2 +1,6 @@
 # Created by .ignore support plugin (hsz.mobi)
 /.idea/
+/.idea/workspace.xml
+src/main/java/runner/
+src/main/resources/
+src/test/
