@@ -9,6 +9,11 @@ import java.net.MalformedURLException;
 import static library.LoggerLib.printLogFrameworkSteps;
 
 public class Generic extends Initialize {
+    /**
+     * sBrowser be set up from testRunner
+     * In testRunner, we will define the value for sBrowser
+     */
+    public static String sBrowser = "Chrome";
 
 
     public static void createNewSessionBrowser() throws MalformedURLException {
@@ -57,5 +62,12 @@ public class Generic extends Initialize {
         GeneralUtilities.focusWebBrowser();
         printLogFrameworkSteps("***** Opened browser *****");
         initElement();
+    }
+    protected void setDefaultBrowser(){
+        runBrowser = Generic.sBrowser;
+        if (runBrowser == null) {
+            runBrowser = "chrome";
+        }
+        logger.info("***** We will start test with browser: " + runBrowser);
     }
 }
