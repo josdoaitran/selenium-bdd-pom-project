@@ -2,6 +2,9 @@ package base;
 
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+import pages.CalculatePage;
+import pages.TermOfServicePage;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,8 +27,14 @@ public class Initialize {
      * Chrome, Firefox, Internet Explorer, Safari, MicrosoftEdge
      */
     public static String runBrowser;
-
-
-
     protected static List<WebDriver> driverList = new ArrayList<WebDriver>();
+
+    protected static CalculatePage calculatePage;
+    protected static TermOfServicePage termOfServicePage;
+
+    protected static void initElement() {
+        logger.info("***** Init elements for all pages *****");
+        PageFactory.initElements(driver, calculatePage);
+        PageFactory.initElements(driver, termOfServicePage);
+    }
 }
