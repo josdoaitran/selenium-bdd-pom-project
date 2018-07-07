@@ -1,6 +1,11 @@
 package library;
 
 import base.Initialize;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.safari.SafariDriver;
 
@@ -15,6 +20,27 @@ public class Generic extends Initialize {
      */
     public static String sBrowser = "Chrome";
 
+    private static void startChromeDriver(){
+        System.setProperty("webdriver.chrome.driver", sDirPath + "/src/test/resources/webDrivers/chromedriver.exe");
+        ChromeOptions options = setOptionsForChrome();
+        driver = new ChromeDriver(options);
+    }
+
+    private static void startFireFoxDriver() {
+        System.setProperty("webdriver.gecko.driver", Generic.sDirPath + "/src/test/resources/webDrivers/geckodriver.exe");
+        FirefoxOptions options = Generic.setOptionsForFirefox();
+        driver = new FirefoxDriver(options);
+    }
+
+    private static void startInternetExplorerDriver(){
+        System.setProperty("webdriver.ie.driver", sDirPath + "/src/test/resources/IEDriverServer.exe");
+        driver = new InternetExplorerDriver();
+    }
+
+    private static void startEdgeDriver(){
+        System.setProperty("webdriver.edge.driver", sDirPath + "/src/test/resources/MicrosoftWebDriver.exe");
+        driver = new EdgeDriver();
+    }
 
     public static void createNewSessionBrowser() throws MalformedURLException {
         printLogFrameworkSteps("We will run with Browser Driver");
