@@ -5,11 +5,13 @@ import org.openqa.selenium.safari.SafariDriver;
 
 import java.net.MalformedURLException;
 
+import static library.LoggerLib.printLogFrameworkSteps;
+
 public class Generic extends Initialize {
 
 
     public static void createNewSessionBrowser() throws MalformedURLException {
-        logger.info("***** We will run with Browser Driver *****");
+        printLogFrameworkSteps("We will run with Browser Driver");
         if (sRunMode == null) {
             if (Generic.runBrowser.equalsIgnoreCase("chrome")) {
                 startChromeDriver();
@@ -54,7 +56,7 @@ public class Generic extends Initialize {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         GeneralUtilities.focusWebBrowser();
-        logger.info("***** Opened browser *****");
+        printLogFrameworkSteps("***** Opened browser *****");
         initElement();
     }
 }
