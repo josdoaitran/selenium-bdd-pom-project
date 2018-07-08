@@ -64,7 +64,6 @@ public class Generic extends Initialize {
             logger.info("***** Browser: " + Generic.sBrowser);
             logger.info("***** OS: " + Generic.sOS);
             logger.info("***** Version: " + Generic.sVersion);
-            setSeleniumGridHub();
             if (Generic.sBrowser.equalsIgnoreCase("chrome")) {
                 ChromeOptions options = Generic.setOptionsForChrome();
                 driver = new RemoteWebDriver(new URL(SELENIUM_GRID_HUB), options);
@@ -89,7 +88,7 @@ public class Generic extends Initialize {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         GeneralUtilities.focusWebBrowser();
-        printLogFrameworkSteps("***** Opened browser *****");
+        printLogFrameworkSteps("Opened browser");
         initElement();
     }
     protected void setDefaultBrowser(){
