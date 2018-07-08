@@ -22,6 +22,8 @@ public class Generic extends Initialize {
      * In testRunner, we will define the value for sBrowser
      */
     public static String sBrowser = "Chrome";
+    public static String sOS = "Windows";
+    public static String sVersion = "60";
 
     private static void startChromeDriver(){
         System.setProperty("webdriver.chrome.driver", sDirPath + "/src/test/resources/webDrivers/chromedriver.exe");
