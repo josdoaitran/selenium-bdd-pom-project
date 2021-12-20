@@ -30,7 +30,7 @@
         <!-- Mail -->
         <mail.version>1.4</mail.version>
         <!-- guava -->
-        <guava.version>24.1.1</guava.version>
+        <guava.version[30.0-jre,)</guava.version>
         <!-- groovy-all -->
         <groovy-all.version>2.3.5</groovy-all.version>
         <!-- java-activation -->
